@@ -35,7 +35,7 @@ app.get('/download', (req, res) => {
             res.download(filepath)
         })
     } catch (err) {
-        res.send('Error.')
+        res.sendFile(`src/error.html`, { root: root })
     }
 })
 
